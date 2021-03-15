@@ -42,7 +42,7 @@ $testCases = [
         'searchText' => '      ',
         'expectedCount' => 9,
         'description' => 'ricerca testo con spazi'
-    ],
+    ]
 ];
 
 $mockTaskList = array(
