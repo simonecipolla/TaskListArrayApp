@@ -2,6 +2,19 @@
 
 # Fare il Fork del progetto
 
+da non fare:
+
+- creare repository vuoto su github
+
+Se vi segnala problemi di credenziali
+
+git config --global user.name "sarassoroberto"
+git config --global user.email sarassorobertoe@gmail.com
+
+git remote add origin https://github.com/corsidrive/TaskListArrayApp.git
+git branch -M main
+git push -u origin main 
+
 Git:
 
 - Fare il fork del repository originale nel proprio utente git.
