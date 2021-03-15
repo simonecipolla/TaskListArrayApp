@@ -8,12 +8,13 @@ da non fare:
 
 Se vi segnala problemi di credenziali
 
-git config --global user.name "sarassoroberto"
-git config --global user.email sarassorobertoe@gmail.com
+> git config --global user.name "sarassoroberto"
+> git config --global user.email sarassorobertoe@gmail.com
 
-git remote add origin https://github.com/corsidrive/TaskListArrayApp.git
-git branch -M main
-git push -u origin main 
+> git remote add origin https://github.com/corsidrive/TaskListArrayApp.git
+> git branch -M main
+> git push -u origin main 
+
 
 Git:
 
