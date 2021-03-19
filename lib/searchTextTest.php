@@ -1,6 +1,6 @@
 <?php
-require "./vendor/testTools/testTool.php";
-require "./case_study/tasklistArray/lib/searchFunctions.php";
+require "../vendor/testTools/testTool.php";
+require "./searchFunctions.php";
 
 $testCases = [
     [
@@ -60,11 +60,6 @@ $mockTaskList = array(
 
 foreach ($testCases as $testCase) {
     extract($testCase);
-    
-    // $searchText = $testCase['searchText'];
-    // $expectedCount = $testCase['expectedCount'];
-    // $description = $testCase['description'];
-
     $actual = array_filter($mockTaskList, searchText($searchText));
     
     assertEquals('array', gettype($actual),'il risultato è un ');

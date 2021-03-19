@@ -1,6 +1,6 @@
 <?php
-require "./vendor/testTools/testTool.php";
-require "./case_study/tasklistArray/lib/searchFunctions.php";
+require "../vendor/testTools/testTool.php";
+require "./searchFunctions.php";
 
 $testCases = [
     [
@@ -50,3 +50,4 @@ foreach ($testCases as $testCase) {
     assertEquals('array', gettype($actual),'il risultato è un ');
     assertEquals($expectedCount, count($actual), $description);
 }
+var_dump($actual);

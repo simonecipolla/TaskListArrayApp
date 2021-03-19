@@ -3,18 +3,33 @@
  * Funzione di ordine superiore funzione che restituisce una funzione
  * Programmazione Funzionale - dichiarativo 
  */
-function searchText($searchText) {
-    
-   
+function searchText($searchText)
+{
+    return function ($taskItem) use ($searchText)
+    {
+        $cleanSpaces = preg_replace('/[ ]+/m', ' ', $searchText);
+        $stringLower = strtolower($taskItem['taskName']);
+        $searchLower = trim(strtolower($cleanSpaces));
+        if ($searchLower !== '')
+        {
+            $result = strpos($stringLower, $searchLower) !== false;
+        } else {
+            $result = true;
+        }
+        return $result;
+    };
 }
 
-/**
- * @var string $status è la stringa che corrisponde allo status da cercare
- * (progress|done|todo)
- * @return callable La funzione che verrà utilizzata da array_filter
- */
-function searchStatus(string $status) : callable {
-    
-} 
-
-
+function searchStatus(string $_status): callable
+{
+    return function ($mockTaskItem) use ($_status)
+    {
+        if (($_status !== 'all') || ($_status !== ''))
+        {
+            $result = strpos($mockTaskItem['status'], $_status) !== false;
+        } else {
+            $result = true;
+        }
+        return $result;
+    };
+}
